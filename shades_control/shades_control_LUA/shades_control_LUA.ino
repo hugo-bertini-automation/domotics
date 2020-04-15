@@ -166,11 +166,15 @@ void loop() {
             
             // triggering the requested shades action
             if (header.indexOf("GET /ROOM_TI/up") >= 0) {
+              Serial.println("ROOM_TI STOP");
+              delay(3000);
               Serial.println("ROOM_TI UP");
               trigger_shade(ROOM_TI, UP_ACTION);
               actionStartTime = currentTime;
               pageRefreshed = 0;
             } else if (header.indexOf("GET /ROOM_TI/down") >= 0) {
+              Serial.println("ROOM_TI STOP");
+              delay(3000);
               Serial.println("ROOM_TI DOWN");
               trigger_shade(ROOM_TI, DOWN_ACTION);
               actionStartTime = currentTime;
